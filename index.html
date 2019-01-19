@@ -1,0 +1,69 @@
+<meta charset="utf-8" />
+<html>
+<head>
+
+    <title>
+        epgen
+    </title>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto|Ubuntu');
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<style>
+    body {
+        background: white;
+        font-family: 'Ubuntu', sans-serif; }
+    section {
+        /* background: black; */
+        /* color: white; */
+        border-radius: 1em;
+        padding: 1em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%) }
+        * { box-sizing:border-box; }
+</style>
+
+<script type="text/javascript" src="https://cdn.rawgit.com/brython-dev/brython/3.6.2/www/src/brython.js">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/brython-dev/brython/3.6.2/www/src/brython_stdlib.js">
+</script>
+
+</head>
+
+<body onLoad="brython(1)">
+
+<div>
+        <h id="text">click below button boi</h>
+</div>
+<button id="hello" type="button">hello</button>
+
+<script type="text/python">
+from browser import document, window
+import browser
+jq = window.jQuery
+
+
+def show_help(ev=None):
+    help = """
+    wanna save money??
+    """
+    browser.alert(help)
+
+def main(ev=None):
+    print("INFO: inside main")
+    jq('#text').text("hello world")
+
+jq('#hello').click(show_help)
+
+</script>
+
+</body>
+
+</html>
