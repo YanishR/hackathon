@@ -1,7 +1,9 @@
+# Hackthon project at SpiderHacks 2019
+# (C) 2019 GH:@YanishR et al.
+# questions? hit up GH:@YanishR
+
 import os
-
 from flask import Flask
-
 from flask import render_template
 
 def create_app(test_config=None):
