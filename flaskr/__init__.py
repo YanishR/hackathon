@@ -33,9 +33,9 @@ def create_app(test_config=None):
         return 'Hello, World!'
 
     #main page
-    @app.route('/')
-    def main():
-        return render_template('register.html')
+    #@app.route('/')
+    #def main():
+    #    return render_template('register.html')
 
     from . import db
     db.init_app(app)
